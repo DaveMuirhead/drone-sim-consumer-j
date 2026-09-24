@@ -1,3 +1,9 @@
 spring:
   application:
     name: drone-sim-consumer-j
+drone:
+  mqtt:
+    broker-urls:
+      - tcp://localhost:1883
+    client-id: drone-detector
+    topic: drones/+/telemetry

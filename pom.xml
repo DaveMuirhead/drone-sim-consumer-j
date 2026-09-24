@@ -9,7 +9,7 @@
 		<version>4.1.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.examplecom.davemuirhead</groupId>
+	<groupId>com.davemuirhead</groupId>
 	<artifactId>drone-sim-consumer-j</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Drone Simulator Consumer - Java</name>
@@ -40,6 +40,33 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-integration</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-mqtt</artifactId>
+		</dependency>
+
+		<!--
+			spring-integration-mqtt uses the Eclipse Paho MQTT client which,
+			starting in v6.5 made the org.eclipse.paho:org.eclipse.paho.client.mqttv3
+			dependency optional, so have to add it explicitly.
+		-->
+		<dependency>
+			<groupId>org.eclipse.paho</groupId>
+			<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+			<version>1.2.5</version>
 		</dependency>
 	</dependencies>
 
